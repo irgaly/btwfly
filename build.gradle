@@ -10,6 +10,10 @@ buildscript {
 apply plugin: 'gradlefx'
 type = 'air' // for AIR Application
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.6'
+}
+
 // for SDK Auto-Install
 repositories {
     add(new org.apache.ivy.plugins.resolver.URLResolver()) {
@@ -30,4 +34,5 @@ dependencies {
 sdkAutoInstall {
     showPrompts	= false
 }
+
 
