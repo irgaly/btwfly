@@ -8,4 +8,26 @@ buildscript {
 }
 
 apply plugin: 'gradlefx'
+type = 'air' // for AIR Application
+
+// for SDK Auto-Install
+repositories {
+    add(new org.apache.ivy.plugins.resolver.URLResolver()) {
+        name = 'Apache'
+        addArtifactPattern 'http://apache.cu.be/flex/4.9.1/binaries/[module]-[revision]-bin.[ext]'
+    }
+
+    add(new org.apache.ivy.plugins.resolver.URLResolver()) {
+        name = 'Adobe Air SDK'
+        addArtifactPattern 'http://download.macromedia.com/air/win/download/[revision]/[module].[ext]'
+    }
+}
+// for SDK Auto-Install
+dependencies {
+    flexSDK group: 'org.apache', name: 'apache-flex-sdk', version: '4.9.1', ext: 'zip'
+    airSDK group: 'com.adobe', name: 'AdobeAIRSDK', version: '3.8', ext: 'zip'
+}
+sdkAutoInstall {
+    showPrompts	= false
+}
 
