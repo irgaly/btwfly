@@ -3,12 +3,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.6'
+        classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.6.4'
     }
 }
 
 apply plugin: 'gradlefx'
-type = 'air' // for AIR Application
+type = 'mobile' // for AIR Mobile Application
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
