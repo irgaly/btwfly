@@ -9,14 +9,17 @@
             <fx:Object
                     icon     = "http://blog.irgaly.net/favicon.png"
                     text     = "text1"
+                    message     = "message1{'\n'}message{'\n'}message{'\n'}message"
                     />
             <fx:Object
                     icon     = "http://blog.irgaly.net/favicon.png"
-                    text     = "text2"
+                    text     = "text2{'\n'}te{'\r'}xt"
+                    message     = "message2"
                     />
             <fx:Object
                     icon     = "http://blog.irgaly.net/favicon.png"
                     text     = "text3"
+                    message     = "message3"
                     />
         </s:ArrayCollection>
 
